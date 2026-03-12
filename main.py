@@ -23,6 +23,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        player.update(dt)
         Clock.tick(60)
         dt = Clock.tick(60) / 1000
 
