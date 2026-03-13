@@ -20,7 +20,7 @@ In this game, you control a spaceship in a field of asteroids. The goal is to su
     ```
 3.  Clone this repository:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://[https://github.com/Jerome-Tremblay/Asteroids]
     ```
 
 ## How to Play
