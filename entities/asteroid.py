@@ -1,7 +1,7 @@
 import pygame
-from circleshape import CircleShape
+from entities.circleshape import CircleShape
 from constants import *
-from logger import log_event
+from entities.logger import log_event
 import random
 
 class Asteroid(CircleShape):
