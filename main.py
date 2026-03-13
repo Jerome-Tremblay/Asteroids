@@ -1,13 +1,13 @@
 import pygame
 import sys
-from constants import SCREEN_WIDTH, SCREEN_HEIGHT
+from constants import *
 from entities.logger import log_state
 from entities.logger import log_event
 from entities.player import Player
 from entities.asteroid import Asteroid
 from entities.asteroidfield import AsteroidField
 from entities.shot import Shot
-from ui import UI
+from ui import *
 
 def main():
     print("Starting Asteroids with pygame version: VERSION")
@@ -29,7 +29,7 @@ def main():
     AsteroidField.containers = (updatable)
     Shot.containers = (shots, drawable, updatable)
 
-    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    player = Player(GAME_WIDTH / 2, GAME_HEIGHT / 2)
     asteroid_field = AsteroidField()
     game_ui = UI()
     
@@ -38,6 +38,8 @@ def main():
         screen.fill("black")
         for entity in drawable:
             entity.draw(screen)
+        pygame.draw.rect(screen, "black", (GAME_WIDTH, 0, SCREEN_WIDTH - GAME_WIDTH, SCREEN_HEIGHT))        
+        pygame.draw.line(screen, "white", (GAME_WIDTH, 0), (GAME_WIDTH, SCREEN_HEIGHT), 2)
         game_ui.draw_score(screen)
         pygame.display.flip()
         for event in pygame.event.get():

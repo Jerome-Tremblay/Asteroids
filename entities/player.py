@@ -27,6 +27,14 @@ class Player(CircleShape):
     def update(self, dt):
         keys = pygame.key.get_pressed()
         self.cooldown_timer -= dt
+        if self.position.x > GAME_WIDTH:
+            self.position.x = 0
+        if self.position.x < 0:
+            self.position.x = GAME_WIDTH
+        if self.position.y > SCREEN_HEIGHT:
+            self.position.y = 0
+        if self.position.y < 0:
+            self.position.y = SCREEN_HEIGHT
 
         if keys[pygame.K_a]:
             self.rotate(dt * -1)

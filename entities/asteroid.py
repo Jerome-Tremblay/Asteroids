@@ -13,6 +13,10 @@ class Asteroid(CircleShape):
 
     def update(self, dt):
         self.position = (self.velocity * dt) + self.position
+        if self.position.x > GAME_WIDTH + self.radius:
+            self.position.x = -self.radius
+        elif self.position.x < -self.radius:
+            self.position.x = GAME_WIDTH + self.radius
 
     def split(self):
         self.kill()
