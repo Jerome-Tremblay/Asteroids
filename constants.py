@@ -1,3 +1,9 @@
+from enum import Enum
+class GameState(Enum):
+    MENU = 1
+    PLAYING = 2
+    GAME_OVER = 3
+
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 GAME_WIDTH = 1000
