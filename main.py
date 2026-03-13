@@ -50,7 +50,6 @@ def main():
                     log_event("asteroid_shot")
                     asteroid.split()
                     shot.kill()
-        Clock.tick(60)
         dt = Clock.tick(60) / 1000
 
 if __name__ == "__main__":
