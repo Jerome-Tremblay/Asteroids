@@ -41,6 +41,7 @@ def main():
         pygame.draw.rect(screen, "black", (GAME_WIDTH, 0, SCREEN_WIDTH - GAME_WIDTH, SCREEN_HEIGHT))        
         pygame.draw.line(screen, "white", (GAME_WIDTH, 0), (GAME_WIDTH, SCREEN_HEIGHT), 2)
         game_ui.draw_score(screen)
+        game_ui.draw_signature(screen)
         pygame.display.flip()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
