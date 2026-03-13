@@ -40,6 +40,7 @@ def main():
                 sprite.kill()
             new_player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
             AsteroidField()
+            game_ui.reset_score()
             return new_player, GameState.PLAYING
     
     while True:
@@ -78,7 +79,6 @@ def main():
                    return
             updatable.update(dt)
             
-            print(f"Checking player at {player.position}")
             for asteroid in asteroids:
                if asteroid.collides_with(player):
                     print("Game over!")
