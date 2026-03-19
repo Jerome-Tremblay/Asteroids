@@ -25,10 +25,10 @@ In this game, you control a spaceship in a field of asteroids. The goal is to su
 
 ## How to Play
 
-Run the game using Python:
+Run the game using Python in the terminal:
 
 ```bash
-python3 main.py
+uv run main.py
 ```
 
 ## Controls
